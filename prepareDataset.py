@@ -28,6 +28,8 @@ class CreateDataset:
     outputHeight = 256
     #Het exemplaar dat momenteel zal weggeschreven worden
     __exemplaarNummer = 0
+    #Het output id dat zal worden gebruikt door het netwerk. Dit moet 0, 1, 2,... zijn!
+    __outputId = {}
 
 
     def __init__(self, name):
@@ -110,6 +112,8 @@ class CreateDataset:
                 fi.close()
                 self.__processIdentitie(id, aantalAfbeeldingen, afbeeldingPaden)
 
+        print(self.__outputId)
+
     def __processIdentitie(self, id, aantalAfbeeldingen, afbeeldingPaden):
         #Bepalen welke afbeeldingen bekeken moeten worden aan de hand van het aantal afbeeldingen
         mod = int(aantalAfbeeldingen/self.maxPictures)
@@ -133,13 +137,24 @@ class CreateDataset:
         outputPad = self.outputFolder+"/"+str(id)+"_"+str(imId)+".jpg"
         cv2.imwrite(outputPad, resized)
 
-        if exemplaarNummer%4 == 0:
+        #id omzetten naar outputId
+        if id not in self.__outputId:
+            #eerste het outputId, dan te teller om de data te verdelen
+            self.__outputId[id] = [len(self.__outputId), 0]
+
+        if self.__outputId[id][1] == 6:
+            self.__outputId[id][1] = 0
+
+        if self.__outputId[id][1] == 0 | self.__outputId[id][1] == 1:
             f = open(self.outputFolder+"/"+self.testFileName, 'a+')
-        elif exemplaarNummer%5 == 0:
+        elif self.__outputId[id][1] == 2:
             f = open(self.outputFolder+"/"+self.queryFileName, 'a+')
         else:
             f = open(self.outputFolder+"/"+self.trainFileName, 'a+')
-        f.write(str(id))
+
+        self.__outputId[id][1] += 1
+
+        f.write(str(self.__outputId[id][0]))
         f.write(' ')
         f.write(outputPad)
         f.write('\n')
