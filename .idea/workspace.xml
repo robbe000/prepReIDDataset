@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0fed005-d86a-430c-800d-8a84121a256b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sortDataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beschrijfDataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linkDataset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepareDataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/prepareDataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prep.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepareDataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/createDataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sortDataset.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +36,51 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
-  <component name="RunManager" selected="Python.sortDataset">
+  <component name="RunManager" selected="Python.beschrijfDataset">
+    <configuration name="beschrijfDataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cvidUitknippen" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/beschrijfDataset.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="createDataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cvidUitknippen" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/createDataset.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cvidUitknippen" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,53 +123,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="prepareDataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="cvidUitknippen" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prepareDataset.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sortDataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="cvidUitknippen" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sortDataset.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sortDataset" />
+        <item itemvalue="Python.beschrijfDataset" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.prepareDataset" />
+        <item itemvalue="Python.createDataset" />
         <item itemvalue="Python.prep" />
       </list>
     </recent_temporary>
@@ -150,25 +153,25 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="695" y="408" width="520" height="289" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.27.1920.1053@0.27.1920.1053" timestamp="1584444451881" />
-    <state width="1897" height="196" key="GridCell.Tab.0.bottom" timestamp="1584452742337">
+    <state width="1897" height="273" key="GridCell.Tab.0.bottom" timestamp="1584550046003">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1897" height="196" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1584452742337" />
-    <state width="1897" height="196" key="GridCell.Tab.0.center" timestamp="1584452742335">
+    <state width="1897" height="273" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1584550046003" />
+    <state width="1897" height="273" key="GridCell.Tab.0.center" timestamp="1584550046001">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1897" height="196" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1584452742335" />
-    <state width="1897" height="196" key="GridCell.Tab.0.left" timestamp="1584452742333">
+    <state width="1897" height="273" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1584550046001" />
+    <state width="1897" height="273" key="GridCell.Tab.0.left" timestamp="1584550046000">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1897" height="196" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1584452742333" />
-    <state width="1897" height="196" key="GridCell.Tab.0.right" timestamp="1584452742336">
+    <state width="1897" height="273" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1584550046000" />
+    <state width="1897" height="273" key="GridCell.Tab.0.right" timestamp="1584550046002">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1897" height="196" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1584452742336" />
-    <state x="449" y="187" key="SettingsEditor" timestamp="1584449338746">
+    <state width="1897" height="273" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1584550046002" />
+    <state x="449" y="187" key="SettingsEditor" timestamp="1584460105010">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="449" y="187" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1584449338746" />
+    <state x="449" y="187" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1584460105010" />
   </component>
 </project>
