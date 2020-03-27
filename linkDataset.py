@@ -73,6 +73,9 @@ class ToCompare:
         Maakt een basis en vergelijk aan"""
         self.inputFolder = inputFolder
         self.loadZelfde()
+        print(self.__zelfde)
+        self.loadVergeleken()
+        print(self.__vergeleken)
         #Als basis om mee te vergelijken
         self.__basis = ItterId(self.inputFolder)
         self.__basis.next()
@@ -120,6 +123,7 @@ class ToCompare:
         #status 0 == opname gegegevens
         #status 1 == zelfde gegevens
         status = 0
+        print("Zelfde inlezen...")
         for line in open(self.inputFolder + "/info.txt", "r").readlines():
             line = line.strip('\n')
             if line == "":
@@ -134,9 +138,11 @@ class ToCompare:
         """Leest de vergeleken file in. In deze file staat beschreven welke identiteiten al vergeleken zijn"""
         self.__vergeleken = []
         try:
+            print("Vergelekenfile inlezen:")
             for line in open(self.inputFolder + "/vergeleken.txt", "r").readlines():
                 line = line.strip('\n')
                 line = line.split(" ")
+                print(line)
                 #Dubbel opslaan om later makkelijk te kunnen zoeken
                 self.__vergeleken.append([(line[0], line[1]), (line[2], line[3])])
                 self.__vergeleken.append([(line[2], line[3]), (line[0], line[1])])
@@ -166,7 +172,15 @@ class ToCompare:
         f.close()
 
     def count(self):
-        """"Telt hoeveel items nog vergeleken moeten worden"""
+        """"Telt hoeveel items nog vergeleken moeten worden.
+            Deze functie slaat ook een lijst op van alle identiteiten die vergeleken moeten worden."""
+
+        try:
+            os.remove(self.inputFolder + "/teVergelijken.txt")
+        except IOError:
+            print("teVergelijken bestaat nog niet")
+
+        f = open(self.inputFolder + "/teVergelijken.txt", 'a+')
         aantal = 0
 
         cBasis = ItterId(self.inputFolder)
@@ -180,12 +194,14 @@ class ToCompare:
                     #Is de virtuele controle al gebeurd tijdens de count?
                     if not self.__inList(cBasis.value, cVergelijk.value, cVergeleken):
                         #Hier moet er normaal visueel gecontroleerd worden
+                        f.write(cBasis.value[0]+" "+cBasis.value[1]+" "+cVergelijk.value[0]+" "+cVergelijk.value[1]+"\n")
                         cVergeleken.append([cBasis.value, cVergelijk.value])
                         cVergeleken.append([cVergelijk.value, cBasis.value])
                         aantal += 1
                         print(str(aantal) + " " + str(cBasis.value) + " " + str(cVergelijk.value) + " --- " + str(self.readEigenschappen(cBasis.value)) + " " + str(self.readEigenschappen(cBasis.value)))
             cVergelijk.reset()
 
+        f.close()
         return aantal
 
 
@@ -261,17 +277,6 @@ class LinkDataset:
         Ok zal er bekeken worden hoeveel checks er nog moeten gebeuren."""
         self.inputFolder = inputFolder
         self.__toCompare = ToCompare(self.inputFolder)
-
-        teller = 0
-        while True:
-            if self.__toCompare.basis() != 0 and self.__toCompare.vergelijk() != 0:
-                if self.__toCompare.next() == 0:
-                    break
-                print(str(teller)+" "+str(self.__toCompare.basis())+" "+str(self.__toCompare.vergelijk()))
-                self.__toCompare.vergelijkDone()
-                teller+=1
-            else:
-                break
 
 
 
